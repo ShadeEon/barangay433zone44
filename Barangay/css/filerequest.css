@@ -1,0 +1,243 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  height: 100vh;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  }
+  
+  section{
+    margin-left: 280px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #for100vh{
+  height: 100vh;
+  }
+  
+  .sidebar {
+    position: fixed;
+    padding: 30px 20px;
+    left: 20px; /* Set the left position */
+    top: 50%; /* Align to the vertical center */
+    transform: translateY(-50%); /* Center vertically */
+    margin-right: 20px;
+    border-radius: 10px;
+    border: solid 1px #555;
+    width: 220px;
+    height: 83vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Push items to the top and bottom */
+  }
+  
+  #sidebartopa{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  #sidebartopwimg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  #sidebartopwimg.active {
+    background-color: #04AA6D;
+  }
+  
+  #sidebartopwimg.active span {
+    color: white; /* Text color for sidebartopwimg anchors when active */
+  }
+  
+  #sidebartopwimg:hover:not(.active) {
+    background-color: #047438dd;
+    color: white;
+  }
+  
+  #sidebartopwimg:not(.active):hover span {
+    color: white;
+  }
+  
+  #sidebartopwimg span{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  #sidebartopwimg img{
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+  }
+  
+  #sidebarbottoma {
+    margin-top: auto; /* Push to the bottom */
+  }
+  
+  /* Remove margin-top for the profile box */
+  #profilebox {
+    margin-top: 0;
+  }
+  
+  hr{
+    width: 95%;
+    background-color: black;
+  }
+  
+  #profilebox{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 8px;
+    align-items: center;
+    color: black;
+  }
+  
+  #profileimage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #04AA6D;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+  
+  #namebox{
+    display: flex;
+    flex-direction: column;
+    color: black; 
+    justify-content: center;
+  }
+  
+  #namebox h5{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  #namebox p{
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  #namebox h5, p{
+    margin: 0;
+  }
+  
+  #aboutsection{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  #aboutsection p{
+    margin-bottom: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to wrap to next line if needed */
+    gap: 16px;
+    width: 100%; /* Sets a maximum width for the container */
+    justify-content: center;
+  }
+
+  .card {
+    border-radius: 8px; /* Rounded corners for boxes */
+    --hover-text: #03ffab;
+    --bg: #fff;
+    --hover-bg: #8bd0bc;
+    border: 2px solid #464853;
+    max-width: 23ch;
+    text-align: center;
+    background: var(--bg);
+    padding: 1.5em;
+    padding-block: 1.8em;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .card__body {
+    color: #464853;
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+  
+  .card > :not(span) {
+    transition: .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .card > strong {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: -.035em;
+  }
+  
+  .card span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    filter: none;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .card:hover span {
+    top: 0;
+    font-size: 1.2em;
+  }
+  
+  .card:hover {
+    background: var(--hover-bg);
+  }
+  
+  .card:hover>div,.card:hover>strong {
+    opacity: 0;
+  }
+
+  .card img {
+    display: block; /* Makes image a block level element */
+    margin: 0 auto; /* Centers image horizontally */
+    width: 100%; /* Image takes full width of box */
+    max-width: 200px;
+    max-height: 200px; /* Sets a maximum height for images */
+  }
+  
+  .card p {
+    margin: 10px 0; /* Adds space between image and text */
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }

@@ -1,0 +1,255 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+}
+
+/* NAV-BAR */
+
+#navbar {
+    overflow: hidden;
+    padding: 15px 40px;
+  }
+
+#navbar a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 40px 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80px;
+  }
+  
+  #navbar a:hover {
+    border-bottom: solid #3f896c 6px;
+  }
+  
+  #navbar a.active {
+    border-bottom: solid #0e6c6c 6px;
+  }
+
+  #navbarlogo{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #navbarlogo h1{
+    margin: 0;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  
+  #navbar img {
+    width: 40px;
+    height: 48px;
+    align-items: center;
+  }
+
+  #navbar a.signupbtn{
+    padding: 16px 40px;
+    margin-left: 20px;
+    background-color: #0aabab;
+    color: white;
+  }
+
+  section{
+    justify-content: center;
+    align-items: center;
+ }
+
+ #for100vh{
+  height: 100vh;
+ }
+ 
+
+#middlebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    border: 2px solid #646161;
+    padding: 40px 40px 10px 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex; /* Add this */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 848px;
+    max-width: 100%;
+    height: 100%;
+}
+
+form h2{
+    margin: 0;
+    font-size: 24px;
+}
+
+form p{
+    margin-bottom: 35px;
+}
+
+form h2, p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#inp1 {
+    display: flex;
+    flex-wrap: wrap; /* Allow inputs to wrap to the next line if needed */
+    justify-content: space-between;
+    width: 100%; /* Set the width to 100% to match the width of the form */
+    max-width: 1000px; /* Limit the maximum width of the inputs */
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#inp1 h1{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: green;
+}
+
+#inp1 input {
+    flex: 1; /* Allow inputs to expand and fill the available space */
+    margin-bottom: 10px; /* Add space between input rows */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+#inp1label{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 5px;
+}
+
+#inp2label{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+#inp2xlabel{
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+}
+
+#inp2xslabel{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#inp23label{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+}
+
+button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background-color: #106b6f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #034a4e;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+input[type="date"]{
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid black;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    max-width: 100%; 
+    font-size: 20px;
+    font-weight:lighter;
+}
+
+select {
+    padding: 9.2px;
+    border: none;
+    border-bottom: 2px solid black;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    width: 100%;
+    max-width: 100%; 
+    font-size: 20px;
+    font-weight:lighter;
+}
+
+select option[value=""][disabled] {
+    display: none;
+}
+
+select option {
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    border-bottom: 2px solid black; 
+    font-size: 10px;
+}
+
+/* Style for select dropdown arrow */
+select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* For older versions of Safari */
+    -moz-appearance: none; /* For older versions of Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position arrow on the right */
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-container input{
+    width: 100%;
+  }
+  
+  .password-container img{
+    position: absolute;
+    cursor: pointer;
+    right: 8px; /* Adjust the position as needed */
+    top: 40%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+  }

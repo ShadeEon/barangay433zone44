@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="css/pictures/Logo/brgylogo.svg">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div id="sidebartopa">
+            <a href="dashboard.html">
+                <div id="sidebartopwimg" class="sidebartopwimg active" onclick="toggleActive('sidebartopwimg1')">
+                    <img src="css/pictures/sidebar/homeactive.svg" alt="home">
+                    <span>Home</span>    
+                </div>
+            </a>
+
+            <a href="filerequest.html">
+                <div id="sidebartopwimg" class="sidebartopwimg">
+                    <img src="css/pictures/sidebar/file.svg" alt="File">
+                    <span>File Request</span>
+                </div>
+            </a>
+
+            <a href="profileuser.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg3')">
+                    <img src="css/pictures/sidebar/profile.svg" alt="Profile">
+                    <span>Profile</span>   
+                </div>
+            </a>
+
+            <a href="login.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="css/pictures/sidebar/logout.svg" alt="Logout">
+                    <span>Logout</span>  
+                </div>
+            </a>
+        </div>
+        
+        <div id="sidebarbottoma">
+            <a href="usersupport.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="css/pictures/sidebar/support.svg" alt="Support">
+                    <span>Support</span>  
+                </div>
+            </a>
+        </div>
+
+        <hr>
+
+        <div id="profilebox">
+            <div id="profileimage"></div>
+
+            <div id="namebox">
+                <h5 id="firstname">NAME KO</h5>
+                <p>emailko@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            var firstname = $('#firstname').text();
+            var intials = firstname.charAt(0);
+            $('#profileimage').text(intials);
+        });
+    </script>
+
+    <section id="for100vh">
+        <div id="aboutsection">
+            <h1>DASHBOARD</h1>
+
+            <div class="importantcontainer">
+                <div class="importanta">
+                    <a class="importantcontaineractive" href="server-profile.html">Requests</a>
+                    <a href="server-login.html">History</a>
+                </div>
+
+                <div class="search-container">
+                    <img src="css/pictures/dashboard/search.svg" alt="search">
+                    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for files...">
+                </div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>File Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-05-08 12:00:00</td>
+                        <td>example.txt</td>
+                        <td>Processed</td>
+                    </tr>
+                </tbody>
+            </table> <!-- Close the table tag -->
+        </div>
+    </section>
+
+    <!-- Add JavaScript to toggle active class -->
+    <script>
+        function toggleActive(id) {
+            var element = document.getElementById(id);
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

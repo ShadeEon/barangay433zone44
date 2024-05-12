@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="server-css/server-profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="css/pictures/Logo/brgylogo.svg">
+    <title>Server-Profile</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div id="sidebartopa">
+            <a href="server-dashboard.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg1')">
+                    <img src="server-css/pictures/sidebar/home.svg" alt="home">
+                    <span>Home</span>    
+                </div>
+            </a>
+
+            <a href="server-profile.html">
+                <div id="sidebartopwimg" class="sidebartopwimg active" onclick="toggleActive('sidebartopwimg3')">
+                    <img src="server-css/pictures/sidebar/profileactive.svg" alt="Profile">
+                    <span>Profile</span>   
+                </div>
+            </a>
+
+            <a href="server-add-admin.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg3')">
+                    <img src="server-css/pictures/sidebar/addmin.svg" alt="Profile">
+                    <span>New Admin</span>   
+                </div>
+            </a>
+        </div>
+        
+        <div id="sidebarbottoma">
+            <a href="server-login.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="server-css/pictures/sidebar/logout.svg" alt="Logout">
+                    <span>Logout</span>  
+                </div>
+            </a>
+        </div>
+
+        <hr>
+
+        <div id="profilebox">
+            <div id="profileimage"></div>
+
+            <div id="namebox">
+                <h5 id="firstname">NAME KO</h5>
+                <p>emailko@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            var firstname = $('#firstname').text();
+            var intials = firstname.charAt(0);
+            $('#profileimage').text(intials);
+        });
+    </script>
+
+    <section id="for100vh">
+        <div id="aboutsection">
+            <h1>ADMIN PROFILE SETTINGS</h1>
+            <p>Customize your account</p> 
+            <form>    
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                </div>
+
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <button>Save</button>
+        </form>
+        </div>
+    </section>
+</body>
+</html>

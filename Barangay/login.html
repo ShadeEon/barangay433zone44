@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/x-icon" href="css/pictures/Logo/brgylogo.svg">
+    <title>Login</title>
+</head>
+<body>
+    <div id="navbar">
+        <div id="navbarlogo">
+            <img src="css/pictures/Logo/brgylogo.svg" alt="none.png">
+            <h1>Barangay 433 Zone 44</h1>
+        </div>
+        <a href="signup.html" class="signupbtn">SIGN UP</a>
+        <a class="active" href="login.html">LOGIN</a>
+        <a href="landingpage.html">HOME</a>
+        <a href="aboutus.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+    <section id="for100vh">
+        <div id="aboutsection">
+            <div id="containerform">
+                <div id="pictureform"></div>
+                <div id="formbox">
+                    <form action="dashboard.html">
+                        <h2>HI!,</h2>
+                        <p>Welcome Back, we missed you!</p>
+            
+                        <div id="inp1">
+                            <div id="inp1label">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                            </div>
+                        </div>
+            
+                        <div id="inp1">
+                            <div id="inp1label">
+                                <label for="password">Password</label>
+                                <div class="password-container">
+                                    <input type="password" id="password" name="password" placeholder="Enter your password" style="padding-right: 32px;" required>
+                                    <img src="css/pictures/login/pass.svg" alt="Show Password" class="password-toggle" onclick="togglePassword()">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div id="fgpw">
+                            <a href="forgotpw.html">Forgot Password?</a>
+                        </div>
+            
+                        <button>Login</button>
+                        <p>Don't have an account? <a href="signup.html" style="text-decoration: none;">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle password visibility
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var passwordToggle = document.querySelector(".password-toggle");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.src = "css/pictures/login/showpass.svg";
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.src = "css/pictures/login/pass.svg";
+            }
+        }
+    </script>
+</body>
+</html>

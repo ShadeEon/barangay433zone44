@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profileuser.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="css/pictures/Logo/brgylogo.svg">
+    <title>User's Profile</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div id="sidebartopa">
+            <a href="dashboard.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg1')">
+                    <img src="css/pictures/sidebar/home.svg" alt="home">
+                    <span>Home</span>    
+                </div>
+            </a>
+
+            <a href="filerequest.html">
+                <div id="sidebartopwimg" class="sidebartopwimg">
+                    <img src="css/pictures/sidebar/file.svg" alt="File">
+                    <span>File Request</span>
+                </div>
+            </a>
+
+            <a href="profileuser.html">
+                <div id="sidebartopwimg" class="sidebartopwimg active" onclick="toggleActive('sidebartopwimg3')">
+                    <img src="css/pictures/sidebar/profileactive.svg" alt="Profile">
+                    <span>Profile</span>   
+                </div>
+            </a>
+
+            <a href="login.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="css/pictures/sidebar/logout.svg" alt="Logout">
+                    <span>Logout</span>  
+                </div>
+            </a>
+        </div>
+        
+        <div id="sidebarbottoma">
+            <a href="usersupport.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="css/pictures/sidebar/support.svg" alt="Support">
+                    <span>Support</span>  
+                </div>
+            </a>
+        </div>
+
+        <hr>
+
+        <div id="profilebox">
+            <div id="profileimage"></div>
+
+            <div id="namebox">
+                <h5 id="firstname">NAME KO</h5>
+                <p>emailko@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            var firstname = $('#firstname').text();
+            var intials = firstname.charAt(0);
+            $('#profileimage').text(intials);
+        });
+    </script>
+
+    <section id="for100vh">
+        <div id="middlebox">
+            <h1>PROFILE SETTINGS</h1>
+            <p>Customize your profile</p>  
+            <form>
+                <div id="inp1">
+                    <h1>PERSONAL INFORMATION</h1>
+                </div>
+    
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+                    </div>
+                
+                    <div id="inp1label">
+                        <label for="middle_name">Middle Initial</label>
+                        <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name" required>
+                    </div>
+    
+                    <div id="inp23label">
+                        <label for="suffix">Suffix</label>
+                        <input type="text" id="suffix" name="suffix" placeholder="e.g. Jr, I, II , III">
+                    </div>
+                </div>
+    
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div id="inp23label">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="birthplace">Birth Place</label>
+                        <input type="text" id="birthplace" name="birthplace" placeholder="Enter your birth place" required>
+                    </div>
+                </div>
+
+                <div id="inp1">
+                    <div id="inp23label">
+                        <label for="gender">Sex</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Sex</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="civil">Civil Status</label>
+                        <select id="civil" name="civil" required>
+                            <option value="" disabled selected>Status</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="religion">Religion</label>
+                        <input type="text" id="religion" name="religion" placeholder="Religion" required>
+                    </div>
+                </div>
+
+                <div id="inp1">
+                    <h1>ADDRESS</h1>
+                </div>
+
+                <div id="inp1">
+                    <div id="inp2label">
+                        <label for="address1">Residence Address</label>
+                        <input type="text" id="address1" name="address1" placeholder="Street number/Barangay" required>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                    </div>
+    
+                    <div id="inp2xlabel">
+                        <label for="zip">Zip/Postal Code</label>
+                        <input type="text" id="zip" name="zip" placeholder="Zip/Postal Code" required>
+                    </div>
+                </div>
+    
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="citezenship">Citezenship</label>
+                        <input type="text" id="citezenship" name="citezenship" placeholder="Citezenship" required>
+                    </div>
+                    
+                    <div id="inp1label">
+                        <label for="number">Contact No.</label>
+                        <input type="number" id="number" name="number" placeholder="Enter your contact number" required>
+                      </div>
+    
+                      <div id="inp1label">
+                        <label for="telephone">Telephone No.</label>
+                        <input type="telephone" id="telephone" name="telephone" placeholder="Optional">
+                      </div>
+                </div>
+
+                <div id="inp1">
+                    <h1>ACCOUNT INFORMATION</h1>
+                </div>
+    
+                <div id="inp1">
+                    <div id="inp1label">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                  </div>
+    
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" name="password" placeholder="Enter your password" style="padding-right: 36px;" required>
+                            <img src="css/pictures/login/pass.svg" alt="Show Password" class="password-toggle" onclick="togglePassword()">
+                        </div>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="cmpassword">Confrim Password</label>
+                        <div class="password-container">
+                            <input type="password" id="cmpassword" name="cmpassword" placeholder="Enter your password" style="padding-right: 36px;" required>
+                            <img src="css/pictures/login/pass.svg" alt="Show Password" class="cmpassword-toggle" onclick="togglecmPassword()">
+                        </div>
+                    </div>
+                </div>
+                <button>Save</button>
+        </form>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle password visibility
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            var passwordToggle = document.querySelector(".password-toggle");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.src = "css/pictures/login/showpass.svg";
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.src = "css/pictures/login/pass.svg";
+            }
+        }
+
+        function togglecmPassword() {
+            var cmpasswordInput = document.getElementById("cmpassword");
+            var cmpasswordToggle = document.querySelector(".cmpassword-toggle");
+
+            if (cmpasswordInput.type === "password") {
+                cmpasswordInput.type = "text";
+                cmpasswordToggle.src = "css/pictures/login/showpass.svg";
+            } else {
+                cmpasswordInput.type = "password";
+                cmpasswordToggle.src = "css/pictures/login/pass.svg";
+            }
+        }
+    </script>
+</body>
+</html>

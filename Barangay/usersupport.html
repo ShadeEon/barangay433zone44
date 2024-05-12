@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/usersupport.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="css/pictures/Logo/brgylogo.svg">
+    <title>User Support</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div id="sidebartopa">
+            <a href="dashboard.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg1')">
+                    <img src="css/pictures/sidebar/home.svg" alt="home">
+                    <span>Home</span>    
+                </div>
+            </a>
+
+            <a href="filerequest.html">
+                <div id="sidebartopwimg" class="sidebartopwimg">
+                    <img src="css/pictures/sidebar/file.svg" alt="File">
+                    <span>File Request</span>
+                </div>
+            </a>
+
+            <a href="profileuser.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg3')">
+                    <img src="css/pictures/sidebar/profile.svg" alt="Profile">
+                    <span>Profile</span>   
+                </div>
+            </a>
+
+            <a href="login.html">
+                <div id="sidebartopwimg" class="sidebartopwimg" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="css/pictures/sidebar/logout.svg" alt="Logout">
+                    <span>Logout</span>  
+                </div>
+            </a>
+        </div>
+        
+        <div id="sidebarbottoma">
+            <a href="usersupport.html">
+                <div id="sidebartopwimg" class="sidebartopwimg active" onclick="toggleActive('sidebartopwimg4')">
+                    <img src="css/pictures/sidebar/supportactive.svg" alt="Support">
+                    <span>Support</span>  
+                </div>
+            </a>
+        </div>
+
+        <hr>
+
+        <div id="profilebox">
+            <div id="profileimage"></div>
+
+            <div id="namebox">
+                <h5 id="firstname">NAME KO</h5>
+                <p>emailko@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            var firstname = $('#firstname').text();
+            var intials = firstname.charAt(0);
+            $('#profileimage').text(intials);
+        });
+    </script>
+
+    <section id="for100vh">
+        <div id="middlebox">
+            <h1>USER SUPPORT</h1>
+            <p>Any question you want to ask?, Do it here!</p>
+            <form>
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <div id="inp1label">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                </div>
+                <div id="inp1">
+                    <div id="inp1label">
+                        <label for="mess">Message</label>
+                        <textarea id="mess" name="mess" placeholder="Enter your message..."></textarea>
+                    </div>
+                </div>
+                <button>Send</button>
+        </form>
+        </div>
+    </section>
+</body>
+</html>

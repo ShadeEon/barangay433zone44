@@ -1,0 +1,202 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+}
+
+/* NAV-BAR */
+
+#navbar {
+  overflow: hidden;
+  padding: 15px 40px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+#navbar a, .signupbtn, .collapse-btn {
+  float: right;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#navbar a, .signupbtn {
+  padding: 16px 40px 6px;
+  width: 80px;
+}
+
+#navbar a:hover {
+  border-bottom: solid #3f896c 6px;
+}
+
+#navbar a.active {
+  border-bottom: solid #0e6c6c 6px;
+}
+
+#navbarlogo{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbarlogo h1{
+  margin: 0;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+#navbar img {
+  width: 40px;
+  height: 48px;
+  align-items: center;
+}
+
+#navbar a.signupbtn {
+  padding: 16px 40px;
+  margin-left: 20px;
+  background-color: #0e6c6c;
+  color: white;
+}
+
+.collapse-btn {
+  display: none;
+  background-color: #0e6c6c;
+  color: white; /* Initially hide the collapsible button */
+}
+
+.collapse-btn :hover {
+  display: none;
+  background-color: #3f896c; /* Initially hide the collapsible button */
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 924px) {
+  #navbar a, .signupbtn {
+      font-size: 12px;
+      width: auto;
+  }
+}
+
+@media screen and (max-width: 814px) {
+  #navbar {
+      padding: 15px 20px;
+  }
+
+  .navbar-container {
+      justify-content: space-between; /* Spacing out elements */
+  }
+
+  #navbar a, .signupbtn, .collapse-btn {
+      font-size: 10px;
+      padding: 10px 20px;
+      width: auto; /* Auto width for flexibility */
+  }
+
+  #navbar img {
+      width: 40px;
+      height: 40px;
+      padding: 14px 0;
+      margin-right: auto; /* Push image to the left */
+  }
+
+  .collapse-btn {
+      display: block; /* Show the collapsible button */
+      width: 80px;
+      height: auto;
+  }
+
+  #navbar a {
+      display: none; /* Hide links */
+  }
+}
+ /* */
+  section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow:hidden;
+    background-image: url(pictures/landingpg/lpbg.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #aboutsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 520px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #leftsbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #leftsbox h1{
+    font-size: 44px;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    text-align: center;
+    max-width: 680px;
+    margin: 0;
+  }
+
+  #leftsbox p{
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+    max-width: 524px;
+  }
+
+  #leftsbox button{
+    background-color: #106b6f;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    width: auto;
+    min-height: 55px;
+    min-width: 40px;
+    outline: none;
+    overflow: hidden;
+    padding: 10px 60px 9px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  #leftsbox button:hover,
+  .button:focus {
+    opacity: .75;
+  }

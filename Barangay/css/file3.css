@@ -1,0 +1,197 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  height: 100vh;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+}
+
+section{
+  justify-content: center;
+  align-items: center;
+}
+
+#for100vh{
+height: 100vh;
+}
+
+#aboutsection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+  form {
+    margin: auto;
+    border: 2px solid #ccc;
+    padding: 40px 40px 40px 40px;
+    border-radius: 10px;
+    display: flex; /* Add this */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+form h2{
+    margin: 0;
+    font-size: 24px;
+}
+
+form p{
+    margin-bottom: 35px;
+}
+
+form h2, p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#inp1 {
+  display: flex;
+  flex-wrap: wrap; /* Allow inputs to wrap to the next line if needed */
+  justify-content: space-between;
+  width: 100%; /* Set the width to 100% to match the width of the form */
+  max-width: 1000px; /* Limit the maximum width of the inputs */
+  margin-bottom: 10px;
+}
+
+#inp1 input {
+  flex: 1; /* Allow inputs to expand and fill the available space */
+  margin-bottom: 10px; /* Add space between input rows */
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+#inp1 h1{
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+  background-color: green;
+}
+
+#inp1label{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#inp2label{
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+}
+
+#inp23label{
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+}
+
+#inp1label, #inp23label, #inp2label label{
+  margin-left: 5px;
+}
+
+input[type="date"]{
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid black;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  max-width: 100%; 
+  font-size: 20px;
+  font-weight:lighter;
+}
+
+textarea {
+  width: 100%; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  border: 1px solid black;
+  border-radius: 4px; /* Optional rounded corners */
+  font-family: inherit; /* Inherit font from parent element */
+  resize: vertical; /* Allow vertical resizing */
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  width: 100%;
+  max-width: 100%; 
+  font-size: 20px;
+  font-weight:lighter;
+  margin-bottom: 10px;
+}
+
+select option[value=""][disabled] {
+  display: none;
+}
+
+select option {
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  border-bottom: 2px solid black; 
+  font-size: 10px;
+}
+
+/* Style for select dropdown arrow */
+select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* For older versions of Safari */
+  -moz-appearance: none; /* For older versions of Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position arrow on the right */
+}
+
+form button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  background-color: #106b6f;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button {
+  position: relative;
+  top: 30px;
+  left: 0;
+  margin: 20px; /* Adjust margin as needed */
+  text-align: center;
+  text-decoration: none;
+  width: 160px;
+  padding: 15px 20px;
+  border: none;
+  background-color: #106b6f;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #034a4e;
+}
+
+button:hover {
+  background-color: #034a4e;
+}
